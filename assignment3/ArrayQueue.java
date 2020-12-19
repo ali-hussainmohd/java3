@@ -1,4 +1,4 @@
-package assignment3;
+package test2;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -69,6 +69,30 @@ public class ArrayQueue <E> {
         size--;
         return result;
     }
+    public int size(){return size;}
+
+    public void clear(){
+        int j = front;
+        for (int i = 0; i < size; i++) {
+            theData[i] = null;
+            j = (j + 1) % capacity;
+        }
+        front = 0;
+        rear = capacity -1;
+        size=0;
+    }
+    public boolean contains(E data){
+        int j = front;
+        for (int i = 0; i < size; i++) {
+            if(theData[j].equals(data)){
+                return true;
+            }
+            j = (j + 1) % capacity;
+        }
+        return false;
+    }
+    
+
     public Iterator<E> iterator()
     {
         return new Iter();

@@ -144,7 +144,7 @@ public class LibrarySystem  {
 
           //(a)	The Book exists in the booksList,
          // (b)The member exists in the membersList,
-          if(bookIndex == -1 || bookIndex==-1)
+          if(bookIndex == -1 || memberIndex==-1)
 
               return false;
 

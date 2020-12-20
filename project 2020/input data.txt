@@ -1,8 +1,12 @@
+book input:
+
 java job bob uob java1122abcd5 2010 1002
+
 math mack rebort uob math1005abcd6 2016 1003
 
+//////////////////////////////////////////
+member input:
 Ali hussain 33366 m 555664
 
-"1- Add Book.\n2- Delete Book.\n3- Search Book." +
-                                       
+noor hussain 33669 f 2222                                       
                                         

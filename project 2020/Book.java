@@ -145,15 +145,15 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
+        return "\nBook{" +
                 "title='" + title + '\'' +
                 ", author1='" + author1 + '\'' +
                 ", author2='" + author2 + '\'' +
-                ", publisher='" + publisher + '\'' +
+                ",\npublisher='" + publisher + '\'' +
                 ", isbn='" + isbn + '\'' +
                 ", yearPublication=" + yearPublication +
                 ", accessionNum=" + accessionNum +
-                ", issuedTo=" + issuedTo +
+                //", issuedTo=" + issuedTo +
                 '}';
     }
 

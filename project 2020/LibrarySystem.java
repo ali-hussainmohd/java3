@@ -2,7 +2,7 @@ package FinalProject;
 
 import java.util.LinkedList;
 
-public class LibrarySystem {
+public class LibrarySystem  {
     //booksList:		list of books – LinkedList object,
     // each element is of type Book,
     private LinkedList<Book> booksList;
@@ -141,16 +141,21 @@ public class LibrarySystem {
      public boolean issueBook(long accessionNum,long cpr){
           int bookIndex= searchBook(accessionNum),
               memberIndex=searchMember(cpr);
+
           //(a)	The Book exists in the booksList,
          // (b)The member exists in the membersList,
-          if(bookIndex == -1 || memberIndex==-1)
+          if(bookIndex == -1 || bookIndex==-1)
+
               return false;
+
+
           Book book = booksList.get(bookIndex);
           LibMember member = membersList.get(memberIndex);
           //(c)	The Book is not issued to any member,
          // (d)	The member has less than 10 books issued to him/her.
 
-          if(book.getIssuedTo() == null|| member.getNumBooksIssued() < 10)
+          if(book.getIssuedTo() != null|| member.getNumBooksIssued() >= 10)
+
           return false;
           //If the book can be issued to a member,
          // then add the Book object in the booksIssued array for the member,
@@ -183,6 +188,7 @@ public class LibrarySystem {
             return true;
 
         }
+
         return false;
     }
 
@@ -193,7 +199,7 @@ public class LibrarySystem {
         int index = searchMember(cpr);
         if(index ==-1)
             System.out.printf("the cpr %d not found ",cpr);
-        membersList.get(index).getBooksIssued().toString();
+        System.out.println(membersList.get(index).getBooksIssued().toString());
     }
     //(xv)	isBookIssued: accepts accession number of the Book as parameter.
     // It returns true if the Book object exists in the bookList
@@ -205,6 +211,7 @@ public class LibrarySystem {
 
         return booksList.get(index).getIssuedTo()!=null;
     }
+
 
 
 

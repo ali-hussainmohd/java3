@@ -210,7 +210,7 @@ public class LibraryMain {
                                         "\"N\" to stop...... ");
                                 answer = read.next();
                         }while(!answer.equalsIgnoreCase("N"));
-
+                            break;
                             case 3://Search Member.
                                 do{
                                 System.out.println("Enter member cpr Number:");

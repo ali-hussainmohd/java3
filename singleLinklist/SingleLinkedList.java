@@ -15,6 +15,11 @@ public class SingleLinkedList<E>
             data = dataItem;
             next = null;
         }
+        private Node(E dataItem,Node next)
+        {
+            data = dataItem;
+            this.next =next ;
+        }
 
     } //end class Node
 
@@ -43,7 +48,7 @@ public class SingleLinkedList<E>
     // Method to insert a new node after the node referenced by node
     private void addAfter (Node<E> node, E item)
     {
-        Node<E> temp = new Node<E>(item);
+        Node<E> temp = new Node<E>(item,node.next);
         node.next = temp;
         size++;
     }
